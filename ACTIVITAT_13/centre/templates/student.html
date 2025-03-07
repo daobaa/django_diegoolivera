@@ -8,4 +8,6 @@
 <p><strong>Correu:</strong> {{ student.correu }}</p>
 <p><strong>Curs:</strong> {{ student.curs }}</p>
 <p><strong>Moduls Matriculats:</strong> {{ student.moduls }}</p>
+
+<button type="button" onclick="window.location.href='{% url 'students' %}'">Volver</button>
 {% endblock %}
