@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>Informació de l'estudiant</h1>
+<p><strong>Nom:</strong> {{ teacher.nom }}</p>
+<p><strong>Cognom 1:</strong> {{ teacher.cognom1 }}</p>
+<p><strong>Cognom 2:</strong> {{ teacher.cognom2 }}</p>
+<p><strong>Correu:</strong> {{ teacher.correu }}</p>
+<p><strong>Curs:</strong> {{ teacher.curs }}</p>
+<p><strong>Tutor:</strong> {{ teacher.tutor }}</p>
+<p><strong>Moduls Impartits:</strong> {{ teacher.moduls_imp }}</p>
+{% endblock %}
