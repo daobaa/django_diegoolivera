@@ -1,26 +1,33 @@
 {% extends 'index.html' %}
+
 {% block content %}
-<h1>INFORMACIÓ ALUMNES TIC BARCELONA</h1>
-<table>
-    <thead>
-    <tr>
-        <th>Nom</th>
-        <th>Cognom 1</th>
-        <th>Cognom 2</th>
-        <th>Correu</th>
-        <th>Curs</th>
-        <th>Moduls Matriculats</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>{{nom}}</td>
-        <td>{{cognom1}}</td>
-        <td>{{cognom2}}</td>
-        <td>{{correu}}</td>
-        <td>{{curs}}</td>
-        <td>{{moduls}}</td>
-    </tr>
-    </tbody>
-</table>
+    <h1>INFORMACIÓ ALUMNES TIC BARCELONA</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Cognom 1</th>
+                <th>Cognom 2</th>
+                <th>Correu</th>
+                <th>Curs</th>
+                <th>Moduls Matriculats</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>{{ student.nom }}</td>
+                    <td>{{ student.cognom1 }}</td>
+                    <td>{{ student.cognom2 }}</td>
+                    <td>{{ student.correu }}</td>
+                    <td>{{ student.curs }}</td>
+                    <td>{{ student.moduls }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6">No se han encontrado estudiantes.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
